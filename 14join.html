@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <title>After Joining</title>
+    <style>
+        body{ font-family: 'Balsamiq Sans', cursive;
+            color: darkblue;
+            margin: 0px;
+            padding: 0px;
+            background: url('img/gym.png');
+           
+        }
+        .left{position: absolute;
+            left: 34px;
+            top: 20px;
+              display: inline-block;
+        }
+        .left img{
+            width: 50px;
+            padding-left: 20px;
+        }
+        .left div{
+            text-align: center;
+        }
+        .mid{display: block;
+            width: 48%;
+            margin: 20px auto;
+        }
+        .right{position: absolute;
+            right: 34px;
+            top: 32px;
+            display: inline-block;
+        }
+        .navbar{
+            display: inline-block;
+        }
+        .navbar li{
+            display: inline-block;
+            font-size: 25px;
+        }
+        .navbar li a{
+           color: purple;
+           text-decoration: none;
+           padding: 34px 20px; 
+          
+       }
+    
+        .navbar li a:hover, .navbar li a.active{
+           text-decoration: underline;
+           color: rgb(219, 45, 196);
+           
+           
+       }
+       .btn{  
+        font-family: 'Balsamiq Sans', cursive;
+           margin: 0px 9px;
+           color: black;
+           background-color: white;
+           padding: 4px 14px;
+           border-radius: 10px;
+           font-size: 16px;
+           cursor: pointer;
+       }
+       .btn:hover{
+           background-color: skyblue;
+       }
+       .about{
+       
+        position: absolute;
+        top: 200px;
+        right: 50px;
+        left: 50px;
+   }
+   .about p{
+       font-size: 30px;
+       color:rgb(31, 224, 24);
+   }
+       
+    </style>    
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logo.png" alt="">
+            <div>
+                Deval"s GYM
+            </div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="http://127.0.0.1:5501/practical14.html" class="active">Home</a></li>
+                <li><a href="http://127.0.0.1:5501/14about.html" >AboutUs</a></li>
+                <li><a href="http://127.0.0.1:5501/14fitcalc.html">FitnessCalculator</a></li>
+                <li><a href="http://127.0.0.1:5501/14contact.html">ContactUs</a></li>
+            </ul>    
+        </div>
+        <div class="right">
+         <button class="btn">Call Us Now</button><button class="btn"><a href="https://mail.google.com/mail/u/0/#inboxm">Email Us</a></button>
+        </div>
+    </header> 
+    <div class="about">
+        <p>THANK YOU FOR JOINING IN OUR GYM.</p>
+     </div> 
+</body>
+</html>

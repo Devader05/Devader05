@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <title>FitnessCalculator</title>
+</head>
+<style>
+    body{ font-family: 'Balsamiq Sans', cursive;
+        color: darkblue;
+        margin: 0px;
+        padding: 0px;
+        background: url('img/gym.png');
+       
+    }
+    .left{position: absolute;
+        left: 34px;
+        top: 20px;
+          display: inline-block;
+    }
+    .left img{
+        width: 50px;
+        padding-left: 20px;
+    }
+    .left div{
+        text-align: center;
+    }
+    .mid{display: block;
+        width: 48%;
+        margin: 20px auto;
+    }
+    .right{position: absolute;
+        right: 34px;
+        top: 32px;
+        display: inline-block;
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 25px;
+    }
+    .navbar li a{
+       color: purple;
+       text-decoration: none;
+       padding: 34px 20px; 
+      
+   }
+
+    .navbar li a:hover, .navbar li a.active{
+       text-decoration: underline;
+       color: rgb(219, 45, 196);
+       
+       
+   }
+   .btn{  
+    font-family: 'Balsamiq Sans', cursive;
+       margin: 0px 9px;
+       color: black;
+       background-color: white;
+       padding: 4px 14px;
+       border-radius: 10px;
+       font-size: 16px;
+       cursor: pointer;
+   }
+   .btn:hover{
+       background-color: skyblue;
+   }
+   .container{
+    border: 2px solid green;
+    margin: 106px 51px;
+    padding: 25px;
+    width: 42%;
+    border-radius: 20px;
+   }
+   .container h1{
+       text-align: center;
+   }
+   .form-group input{
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    width: 450px;
+    padding: 1px;
+    border-radius: 8px;
+    margin: 11px auto;
+    font-family: 'Balsamiq Sans', cursive;
+   }
+   .container button{
+         display: block;
+         margin: auto;
+         width: 33%;
+   }
+</style>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logo.png" alt="">
+            <div>
+                Deval"s GYM
+            </div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="http://127.0.0.1:5501/practical14.html" >Home</a></li>
+                <li><a href="http://127.0.0.1:5501/14about.html" >AboutUs</a></li>
+                <li><a href="http://127.0.0.1:5501/14fitcalc.html" class="active">FitnessCalculator</a></li>
+                <li><a href="http://127.0.0.1:5501/14contact.html">ContactUs</a></li>
+            </ul>    
+        </div>
+        <div class="right">
+         <button class="btn">Call Us Now</button><button class="btn"><a href="https://mail.google.com/mail/u/0/#inboxm">Email Us</a></button>
+        </div>
+    </header> 
+    <div class="container"> 
+    <form>
+        <div>
+            Weight : <input type="number" id="firstNumber" placeholder="in kg">
+        </div>
+        <div>
+            Height : <input type="number" id="secondNumber" placeholder="in meters squares">
+        </div>
+        
+        <input type="button" onClick="divideBy()"
+        Value="Calculate BMI" />
+    </form>
+        <p>Weight Status : 
+            <span id = "result"></span>
+           </p>
+        <script>
+           
+            function divideBy()
+            {
+              num1 = document.getElementById(
+                "firstNumber").value;
+              num2 = document.getElementById(
+                "secondNumber").value;
+            
+              r=num1/num2;
+              if(r<18.5){
+                document.getElementById(
+                "result").innerHTML = "Underweight";
+              }
+              else if(r>=18.5 && r<=24.9){
+                document.getElementById(
+                "result").innerHTML = "Normal weight";
+              } 
+              else if(r>=25 && r<=29.9){
+                document.getElementById(
+                "result").innerHTML = "Overweight";
+              }
+              else{
+                document.getElementById(
+                "result").innerHTML = "Obesity";
+              } 
+
+            }
+            
+          </script>
+          </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <link rel="stylesheet" href="CSS/style.css"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deval Fitness</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <script>
+        function validate()
+    {
+        var username= document.getElementById("name");
+        var phonenumber = document.getElementById("number");
+        var email= document.getElementById("email");
+        var age= document.getElementById("age");
+        var city= document.getElementById("local");
+        // var branch= document.getElementById("branch");
+        var gender= document.getElementById("gender");
+        if(username.value.trim()==""||phonenumber.value.trim()==0||email.value.trim()==""||age.value==""||city.value.trim()==""||gender.value.trim()=="")
+        {
+            alert("All fields are mandatory");
+            return false;
+        }
+        else
+        {
+             true;
+        }
+    }    
+    </script>
+</head>
+
+<style>
+    body{ font-family: 'Balsamiq Sans', cursive;
+        color: darkblue;
+        margin: 0px;
+        padding: 0px;
+        background: url('img/gym.png');
+       
+    }
+    .left{position: absolute;
+        left: 34px;
+        top: 20px;
+          display: inline-block;
+    }
+    .left img{
+        width: 50px;
+        padding-left: 20px;
+    }
+    .left div{
+        text-align: center;
+    }
+    .mid{display: block;
+        width: 48%;
+        margin: 20px auto;
+    }
+    .right{position: absolute;
+        right: 34px;
+        top: 32px;
+        display: inline-block;
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 25px;
+    }
+    .navbar li a{
+       color: purple;
+       text-decoration: none;
+       padding: 34px 20px; 
+      
+   }
+
+    .navbar li a:hover, .navbar li a.active{
+       text-decoration: underline;
+       color: rgb(219, 45, 196);
+       
+       
+   }
+   .btn{  
+    font-family: 'Balsamiq Sans', cursive;
+       margin: 0px 9px;
+       color: black;
+       background-color: white;
+       padding: 4px 14px;
+       border-radius: 10px;
+       font-size: 16px;
+       cursor: pointer;
+   }
+   .btn:hover{
+       background-color: skyblue;
+   }
+   .container{
+    border: 2px solid green;
+    margin: 106px 51px;
+    padding: 25px;
+    width: 42%;
+    border-radius: 20px;
+   }
+   .container h1{
+       text-align: center;
+   }
+   .form-group input{
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    width: 450px;
+    padding: 1px;
+    border-radius: 8px;
+    margin: 11px auto;
+    font-family: 'Balsamiq Sans', cursive;
+   }
+   .container button{
+         display: block;
+         margin: auto;
+         width: 33%;
+   }
+</style>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/logo.png" alt="">
+            <div>
+                Deval"s GYM
+            </div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="http://127.0.0.1:5501/practical14.html" class="active">Home</a></li>
+                <li><a href="http://127.0.0.1:5501/14about.html" >AboutUs</a></li>
+                <li><a href="http://127.0.0.1:5501/14fitcalc.html">FitnessCalculator</a></li>
+                <li><a href="http://127.0.0.1:5501/14contact.html">ContactUs</a></li>
+            </ul>    
+        </div>
+        <div class="right">
+         <button class="btn">Call Us Now</button><button class="btn"><a href="https://mail.google.com/mail/u/0/#inboxm">Email Us</a></button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym of Moradabad now</h1>
+        <form onsubmit="return validate()" action="14join.html">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Name" id="name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Age" id="age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Gender" id="gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Locality" id="local">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Email id" id="email">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Your Phone Number" id="number">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
